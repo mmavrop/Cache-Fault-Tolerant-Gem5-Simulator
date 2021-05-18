@@ -43,6 +43,6 @@ The implementation of this work was part of my phd, under the supervision of *pr
 
 [2] Y.G. Choi, S. Yoo, S. Lee, and J.H. Ahn. Matching Cache Access Behavior and Bit Error Pattern for High Performance Low Vcc L1 Cache. Proc. of Design Automation Conference, 2011.
 
-[3] G. Keramidas, M. Mavropoulos, A. Karvouniari, and D. Nikolos. Spatial Pattern Prediction Based Management of Faulty Data Caches. Proc. of Intl. Conference on Design, Automation, and Test in Europe, 2014.
+[3] M. Mavropoulos, G. Keramidas, and D. Nikolos. Enabling Efficient Sub-block Disabled Caches Using Coarse Grain Spatial Predictions. IEEE Transactions on Computers, 2021. (Under review, not published work)
 
 [4] G.S. Sohi. Cache Memory Organization to Enhance the Yield of High-Performance VLSI Processors. Trans. on Computers, 1989. 
