@@ -44,12 +44,11 @@ fcache_type="DL1"                               # choices: "IL1", "DL1"
 benchmark_dir="polybench-c-4.2"
 poly_datamining="correlation covariance"
 poly_blas="gemver gesummv gemm symm syr2k syrk trmm"
-poly_kernels="atax" #bicg doitgen 2mm 3mm atax bicg doitgen mvt"
+poly_kernels="atax bicg doitgen 2mm 3mm atax bicg doitgen mvt"
 poly_solvers="cholesky durbin gramschmidt lu ludcmp trisolv"
 poly_medley="deriche floyd-warshall nussinov"
 poly_stencils="adi fdtd-2d heat-3d jacobi-1d jacobi-2d seidel-2d"
-#BENCHMARKS=$poly_datamining" "$poly_blas" "$poly_kernels" "$poly_solvers" "$poly_medley" "$poly_stencils
-BENCHMARKS="$poly_kernels" 
+BENCHMARKS=$poly_datamining" "$poly_blas" "$poly_kernels" "$poly_solvers" "$poly_medley" "$poly_stencils
 
 ##########################################################################
 ###---------------------------Check Paths----------------------------#####
