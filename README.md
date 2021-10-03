@@ -43,6 +43,6 @@ The implementation of this work was part of my phd, under the supervision of *pr
 
 [2] Y.G. Choi, S. Yoo, S. Lee, and J.H. Ahn. Matching Cache Access Behavior and Bit Error Pattern for High Performance Low Vcc L1 Cache. Proc. of Design Automation Conference, 2011.
 
-[3] M. Mavropoulos, G. Keramidas, and D. Nikolos. Enabling Efficient Sub-block Disabled Caches Using Coarse Grain Spatial Predictions. IEEE Transactions on Computers, 2021. (Under review, not published work)
+[3] M. Mavropoulos, G. Keramidas, and D. Nikolos. Enabling Efficient Sub-block Disabled Caches Using Coarse Grain Spatial Predictions. (Under review, not published work)
 
 [4] G.S. Sohi. Cache Memory Organization to Enhance the Yield of High-Performance VLSI Processors. Trans. on Computers, 1989. 
