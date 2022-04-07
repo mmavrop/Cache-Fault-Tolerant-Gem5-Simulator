@@ -167,7 +167,7 @@ if (predictor.valid[offset] == 1)
         {
 
         if (predictor.valid[i] == 1){
-//--------an iparxei to pc kanw update sto entry---------------
+//--------In case of a hit, update the entry---------------
         #ifdef nooffset
              if (predictor.pc[i] == pc)
         #else
@@ -312,8 +312,7 @@ offset = pc;
         predictor.valid[offset]=1;
 
         int suma= bit_counter1 + bit_counter2;
-        //int suma2 = predictor.sb1[offset] + predictor.sb2[offset];
-
+        
         if (predictor.cc[offset] == 3){
                 if (suma==2) predictor.cc[offset] = 3;
                 else if ((suma==1) || (suma==0)) {
@@ -356,8 +355,6 @@ int suma2 = predictor.sb1[offset] + predictor.sb2[offset];
 
 if (predictor.valid[offset] == 1){
 
-//    if ((predictor.sb1[offset] == bit_counter1) &&
-//                    (predictor.sb2[offset] == bit_counter2))
     if (suma == suma2)
     {
     #ifdef CONFIDENCE_CNT
@@ -422,7 +419,7 @@ else {
     int flag = 0;
     for ( i=0; i<predictor.cur_entries; i++ )
     {
-    //--an iparxei to pc kanw update sto entry--
+    //--Update the info in case of hit--
     #ifdef nooffset
         if (predictor.pc[i] == pc)
     #else
@@ -440,8 +437,7 @@ else {
     #ifdef pred_LRU
                 predictor.timestamp[i]=tstamp;	//FIFO - LRU
     #endif
-    //an exw to idio utilizationme tin proigoumeni fora
-    //= hit (einai to accuracy)
+    //Update the accuracy in case of correct prediction 
                if ((predictor.sb1[i] == bit_counter1) &&
                                (predictor.sb2[i] == bit_counter2))
                {
@@ -486,10 +482,10 @@ else {
                 #endif
                }
             }
-    }	//edw kleinei to for
-    //---an den iparxei to pc elegxw an o pinakas einai gematos i oxi----
+    }	
+    //---PC not found, check if the table is full----
     if (flag==0) {
-         //an den exei gemisei o pinakas
+         //There is empty entry
          if (predictor.cur_entries<pred_entries){
              predictor.pc[predictor.cur_entries]=pc;
              predictor.offset[predictor.cur_entries]=offset;
@@ -503,7 +499,7 @@ else {
              predictor.cur_entries++;
          }
          else
-         {//an exei gemisei o pinakas
+         {//A replacement should be done, table is full 
              predictor.total_repl++;
              min = predictor.timestamp[0];
              mini = 0;
